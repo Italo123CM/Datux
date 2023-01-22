@@ -1,0 +1,125 @@
+# Realizar un Menú Iterativo que tenga las siguientes opciones(Solo poner el número de la
+# pregunta):
+# Realizar un programa que dibuje un cuadrado en consola con *, usando bucles.
+# Realizar una iteración de una lista de números e identificar si es múltiplo de 2 e
+# imprimir el número
+#- Iterar una lista de elementos que contengan nombre y edad e imprimir solo los
+# mayores de edad.
+# Nota : cada elemento de la lista puede ser otra lista [[nombre,edad],.... ]
+opcion=0
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+personas = [['Juan', 20], ['Pedro', 25], ['Maria', 17], ['Lucia', 21]]
+
+def dibujar_cuadrado():
+    size = int(input("Ingresa el tamaño del cuadrado: "))
+    for i in range(size):
+        for j in range(size):
+            print("*", end=" ")
+        print()
+
+while opcion != 4:
+    print("Menú:")
+    print("1. Dibujar cuadrado")
+    print("2. Identificar números pares")
+    print("3. Imprimir mayores de edad")
+    print("4. Salir")
+    opcion = int(input("Selecciona una opción: "))
+
+    if opcion == 1:
+        dibujar_cuadrado()
+
+    elif opcion == 2:
+        for num in numeros:
+            if num % 2 == 0:
+                print(num)
+
+    elif opcion == 3:
+        for persona in personas:
+            if persona[1] >= 18:
+                print(persona[0])
+
+    elif opcion == 4:
+        print("Saliendo del programa...")
+
+    else:
+        print("Opción inválida, selecciona una opción válida.")
+
+
+
+
+
+
+
+
+
+
+#Ejercicio Numero 2
+
+
+Biblioteca={"categorias":{
+            "Sociologia":    {"titulo":"Introducción a la sociología",
+                              "autor":" Peter L. Berger",
+                              "estado":"disponible"},
+            "Cientifico":    {"titulo":"El bonobo y los diez mandamientos",
+                              "autor":"Frans de Waal",
+                              "estado":"disponible"},
+   "Literatura peruana":     {"titulo":"Novelas y cuentos completos",
+                              "autor":"Cesar Vallejo",
+                              "estado":"disponible"},
+            "Usuarios":     ["Italo","Rodrigo","Julio"]
+}                    
+}
+
+#Lista de Categorias
+categorias=list(Biblioteca["categorias"].keys())
+print("Consulta de las categorias:")
+for i in categorias:
+    print(i)
+
+categoria=input("Ingrese la categoria: ")
+for a,b in Biblioteca["categorias"][categoria].items():
+    print(a,":", b)
+
+Respuesta=["si"]
+Prestado=input("Se prestara el libro? (si/no): ")
+if Prestado in Respuesta:
+    UsuarioPrestado=input("ingrese el usuario: ")
+    Biblioteca["categorias"][categoria]["estado"]="prestado"+"-"+UsuarioPrestado
+    print("Se actualizo el estado del libro")
+    for k,v in Biblioteca["categorias"][categoria].items():
+        print(k,":", v)
+else:
+    print("fin de la consulta")
+
+print("Lista de los Usuarios actuales:")
+print(Biblioteca["categorias"]["Usuarios"])
+
+
+
+#Ejercicio Numero 3:
+
+
+Valor1=int(input("Ingrese el primero valor: "))
+Valor2=int(input("Ingrese el segundo valor: "))
+
+def Numero(Valor1, Valor2):
+    
+    if Valor1 > Valor2:
+        return Valor1
+    else:
+        return Valor2
+
+print("El número mayor es: ", Numero(Valor1, Valor2))
+
+
+
+#Ejercicio Numero 4:
+
+import sys
+a=sys.argv
+
+def Argumentos(*args):
+    for arg in args:
+        print(arg)
+
+Argumentos("Me llamo Italo y soy estudiante de la Unfv tengo",[2,"perros y",1,"gato"],{'Estudios':["universitario"]})
