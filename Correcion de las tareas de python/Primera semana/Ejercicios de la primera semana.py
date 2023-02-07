@@ -6,7 +6,7 @@ nom = input("Ingresa tus nombres :")
 apell = input("Ingresa tus apellidos: ")
 edad = input("Ingresa tu edad: ")
 dni  = input("Ingrese el numero de su dni: ")
-print("Mi nombre es "+ nom + ", mis apellidos son "+ apell+ " y mi edad es: " + edad +", identifcado con el numero de dni " +dni)
+print("Mi nombre es "+ nom + ", mis apellidos son "+ apell+ " y mi edad es: " + edad +", identificado con el numero de dni " +dni)
 print("--------------------------")
 
 #Calcule el área de un círculo, triángulo equilatero y cuadrado con radio ingresado desde el teclado
